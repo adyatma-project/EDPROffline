@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/purple2"
+    tools:context=".ProfileActivity">
+
+
+    <View
+        android:id="@+id/viewbatik"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/batik"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvprofil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/viewbatik"
+        android:layout_alignStart="@id/viewbatik"
+        android:layout_alignEnd="@id/viewbatik"
+        android:layout_alignBottom="@id/viewbatik"
+        android:layout_marginVertical="80dp"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-light"
+        android:text="Profil Kamu"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#00BCD4"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/update"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#00BCD4"
+        android:src="@drawable/ic_update_32"
+        android:contentDescription="Update"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/update"
+        android:layout_alignStart="@id/update"
+        android:textStyle="bold"
+        android:textSize="8sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:layout_alignEnd="@id/update"
+        android:text="Ubah Profil"/>
+
+        <ScrollView
+            android:layout_below="@+id/viewbatik"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <TextView
+                    android:id="@+id/tvnama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NAMA :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"/>
+
+
+                <TextView
+                    android:id="@+id/tvtanggallahir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TANGGAL LAHIR :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvnama"
+                    app:layout_constraintStart_toStartOf="@id/tvnama"
+                    android:layout_marginTop="25dp"/>
+
+
+                <TextView
+                    android:id="@+id/tvumur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UMUR :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvtanggallahir"
+                    app:layout_constraintStart_toStartOf="@id/tvtanggallahir"
+                    android:layout_marginTop="25dp"/>
+
+                <TextView
+                    android:id="@+id/tvAgama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AGAMA :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvumur"
+                    app:layout_constraintStart_toStartOf="@id/tvumur"
+                    android:layout_marginTop="25dp"/>
+
+
+
+                <TextView
+                    android:id="@+id/tvPekerjaanIbu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PEKERJAAN IBU :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvAgama"
+                    app:layout_constraintStart_toStartOf="@id/tvAgama"
+                    android:layout_marginTop="25dp"/>
+
+
+                <TextView
+                    android:id="@+id/tvPendidikanIbu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PENDIDIKAN IBU :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvPekerjaanIbu"
+                    app:layout_constraintStart_toStartOf="@id/tvPekerjaanIbu"
+                    android:layout_marginTop="25dp"/>
+
+
+                <TextView
+                    android:id="@+id/tvGolonganDarah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GOLONGAN DARAH :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvPendidikanIbu"
+                    app:layout_constraintStart_toStartOf="@id/tvPendidikanIbu"
+                    android:layout_marginTop="25dp"/>
+
+
+
+
+                <TextView
+                    android:id="@+id/tvALAMAT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ALAMAT :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvGolonganDarah"
+                    app:layout_constraintStart_toStartOf="@id/tvGolonganDarah"
+                    android:layout_marginTop="25dp"/>
+
+
+                <TextView
+                    android:id="@+id/tvNamaSuami"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NAMA SUAMI :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvALAMAT"
+                    app:layout_constraintStart_toStartOf="@id/tvALAMAT"
+                    android:layout_marginTop="25dp"/>
+
+
+                <TextView
+                    android:id="@+id/tvPekerjaanSuami"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PEKERJAAN SUAMI :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvNamaSuami"
+                    app:layout_constraintStart_toStartOf="@id/tvNamaSuami"
+                    android:layout_marginTop="25dp"/>
+
+
+                <TextView
+                    android:id="@+id/tvPendidikanSuami"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PENDIDIKAN SUAMI :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvPekerjaanSuami"
+                    app:layout_constraintStart_toStartOf="@id/tvPekerjaanSuami"
+                    android:layout_marginTop="25dp"/>
+
+
+                <TextView
+                    android:id="@+id/tvNoHpIbu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NO. HP IBU :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvPendidikanSuami"
+                    app:layout_constraintStart_toStartOf="@id/tvPendidikanSuami"
+                    android:layout_marginTop="25dp"/>
+
+
+                <TextView
+                    android:id="@+id/tvNoHpSuami"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NO. HP SUAMI :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvNoHpIbu"
+                    app:layout_constraintStart_toStartOf="@id/tvNoHpIbu"
+                    android:layout_marginTop="25dp"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <TextView
+                    android:id="@+id/nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NAMA :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="@id/tvnama"
+                    app:layout_constraintStart_toEndOf="@id/tvPendidikanSuami"
+                    android:layout_marginStart="20dp" />
+
+
+                <TextView
+                    android:id="@+id/tanggallahir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TANGGAL LAHIR :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="@id/tvtanggallahir"
+                    app:layout_constraintStart_toStartOf="@id/nama"
+                    />
+
+
+                <TextView
+                    android:id="@+id/umur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UMUR :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="@id/tvumur"
+                    app:layout_constraintStart_toStartOf="@id/nama"/>
+
+                <TextView
+                    android:id="@+id/agama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AGAMA :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="@id/tvAgama"
+                    app:layout_constraintStart_toStartOf="@id/nama"/>
+
+
+
+                <TextView
+                    android:id="@+id/pekerjaanIbu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PEKERJAAN IBU :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="@id/tvPekerjaanIbu"
+                    app:layout_constraintStart_toStartOf="@id/nama"/>
+
+
+                <TextView
+                    android:id="@+id/PendidikanIbu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PENDIDIKAN IBU :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="@id/tvPendidikanIbu"
+                    app:layout_constraintStart_toStartOf="@id/nama"/>
+
+
+                <TextView
+                    android:id="@+id/golonganDarah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GOLONGAN DARAH :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="@id/tvGolonganDarah"
+                    app:layout_constraintStart_toStartOf="@id/nama"/>
+
+                <TextView
+                    android:id="@+id/alamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ALAMAT :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="@id/tvALAMAT"
+                    app:layout_constraintStart_toStartOf="@id/nama"/>
+
+
+                <TextView
+                    android:id="@+id/namaSuami"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NAMA SUAMI :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="@id/tvNamaSuami"
+                    app:layout_constraintStart_toStartOf="@id/nama"/>
+
+
+                <TextView
+                    android:id="@+id/pekerjaanSuami"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PEKERJAAN SUAMI :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="@id/tvPekerjaanSuami"
+                    app:layout_constraintStart_toStartOf="@id/nama"/>
+
+
+                <TextView
+                    android:id="@+id/pendidikanSuami"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PENDIDIKAN SUAMI :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="@id/tvPendidikanSuami"
+                    app:layout_constraintStart_toStartOf="@id/nama"/>
+
+
+                <TextView
+                    android:id="@+id/noHpIbu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NO. HP IBU :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="@id/tvNoHpIbu"
+                    app:layout_constraintStart_toStartOf="@id/nama"/>
+
+
+                <TextView
+                    android:id="@+id/noHpSuami"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NO. HP SUAMI :"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="@id/tvNoHpSuami"
+                    app:layout_constraintStart_toStartOf="@id/nama"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ScrollView>
+        </ScrollView>
+    </RelativeLayout>
